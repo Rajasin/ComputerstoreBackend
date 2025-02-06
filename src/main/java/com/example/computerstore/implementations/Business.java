@@ -3,7 +3,9 @@ package com.example.computerstore.implementations;
 import com.example.computerstore.PasswordHashingUtil;
 import com.example.computerstore.interfaces.Account;
 import jakarta.persistence.*;
+import lombok.Getter;
 
+@Getter
 @Entity
 @Table(name = "businesses")
 public class Business implements Account {
@@ -76,4 +78,5 @@ public class Business implements Account {
     public void showOffers() {
 
     }
+
 }

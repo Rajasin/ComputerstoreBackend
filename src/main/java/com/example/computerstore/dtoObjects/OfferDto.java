@@ -8,9 +8,13 @@ import lombok.Setter;
 @Getter
 @Setter
 public class OfferDto {
-    Business business;
+    Integer business_id;
     String name;
     double price;
     String description;
     String condition;
+
+    public Integer getBusinessId() {
+        return business_id;
+    }
 }

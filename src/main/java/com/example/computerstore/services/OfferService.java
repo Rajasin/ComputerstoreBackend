@@ -16,12 +16,12 @@ public class OfferService {
     @Autowired
     private BusinessRepository businessRepository;
 
-    public Offer createOfferForBusiness(Integer businessId, Offer offer) {
+    public Offer createOfferForBusiness(Integer businessId, String name, double price, String description, String condition) {
 
         Business business = businessRepository.findById(Long.valueOf(businessId))
-                .orElseThrow(() -> new EntityNotFoundException("Business not found"));
+                .orElseThrow(() -> new EntityNotFoundException("Business not found with id: " + businessId));
 
-        offer.setBusiness(business);
+        Offer offer = new Offer(business, name, price, description, condition);
 
         return offerRepository.save(offer);
     }

@@ -40,7 +40,7 @@ public class WebController {
 
     @PostMapping("/addOffer")
     public Offer addOffer(@RequestBody OfferDto offerDto) {
-        return offerService.createOfferForBusiness(offerDto.getBusiness(), offerDto.getName(), offerDto.getPrice(), offerDto.getDescription(), offerDto.getCondition());
+        return offerService.createOfferForBusiness(offerDto.getBusinessId(), offerDto.getName(), offerDto.getPrice(), offerDto.getDescription(), offerDto.getCondition());
     }
 
 }

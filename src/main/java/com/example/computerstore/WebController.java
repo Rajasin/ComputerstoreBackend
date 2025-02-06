@@ -43,4 +43,6 @@ public class WebController {
         return offerService.createOfferForBusiness(offerDto.getBusinessId(), offerDto.getName(), offerDto.getPrice(), offerDto.getDescription(), offerDto.getCondition());
     }
 
+    //tu dodajesz nowe endpointy
+
 }

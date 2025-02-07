@@ -35,6 +35,11 @@ public class Business implements Account {
     }
 
     public void setHashedPassword(String rawPassword) {
+        if( rawPassword == null) {
+            this.password = null;
+            return;
+        }
+        
         this.password = PasswordHashingUtil.hashPassword(rawPassword);
     }
 

@@ -22,7 +22,9 @@ public class BusinessService {
 
 
     public Iterable<Business> findAllBusinesses() {
-        return businessRepository.findAll();
+        Iterable<Business> businesses = businessRepository.findAll();
+        businesses.forEach(business -> business.setHashedPassword(null));
+        return businesses;
     }
 
 }

@@ -54,4 +54,9 @@ public class WebController {
     public Iterable<Offer> getAllOffers() {
         return offerService.findAllOffers();
     }
+
+    @GetMapping("/businesses")
+    public Iterable<Business> getAllBusinesses() {
+        return businessService.findAllBusinesses();
+    }
 }

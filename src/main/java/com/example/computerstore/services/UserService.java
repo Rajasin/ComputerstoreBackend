@@ -18,8 +18,10 @@ public class UserService {
         return userRepository.save(user);
     }
 
-    // Nowa metoda zwracająca listę wszystkich użytkowników
+    // Nowa metoda zwracająca listę wszystkich użytkowników bez hasła
     public Iterable<User> findAllUsers() {
-        return userRepository.findAll();
+        Iterable<User> users = userRepository.findAll();
+        users.forEach(user -> user.setHashedPassword(null));
+        return users;
     }
 }

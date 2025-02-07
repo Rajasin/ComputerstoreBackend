@@ -4,6 +4,8 @@ import com.example.computerstore.PasswordHashingUtil;
 import com.example.computerstore.interfaces.Account;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+
 
 @Entity
 @Table(name = "users")
@@ -11,13 +13,13 @@ public class User implements Account {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_seq")
     private Integer id;
-
+    @Getter
     @Column(nullable = false)
     private String name;
-
+    @Getter
     @Column(nullable = false)
     private String surname;
-
+    @Getter
     @Column
     private String location;
 
@@ -46,6 +48,11 @@ public class User implements Account {
     }
 
     public void setHashedPassword(String rawPassword) {
+        if( rawPassword == null) {
+            this.password = null;
+            return;
+        }
+
         this.password = PasswordHashingUtil.hashPassword(rawPassword);
     }
 

@@ -3,6 +3,7 @@ package com.example.computerstore.dtoObjects;
 import lombok.Getter;
 import lombok.Setter;
 
+
 @Getter
 @Setter
 public class BusinessDto {

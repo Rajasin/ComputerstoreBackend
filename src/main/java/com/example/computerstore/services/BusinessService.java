@@ -20,7 +20,7 @@ public class BusinessService {
         return businessRepository.save(business);
     }
 
-    //todo zrobić takie metody dla pozostałych dwóch klas. Gdy Wywołuję tę funkcję endpointem, to chcę dostać w informacji zwrotnej listę obiektów
+
     public Iterable<Business> findAllBusinesses() {
         return businessRepository.findAll();
     }

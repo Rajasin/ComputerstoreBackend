@@ -43,6 +43,15 @@ public class WebController {
         return offerService.createOfferForBusiness(offerDto.getBusinessId(), offerDto.getName(), offerDto.getPrice(), offerDto.getDescription(), offerDto.getCondition());
     }
 
-    //tu dodajesz nowe endpointy
+    // Nowy endpoint zwracający wszystkich użytkowników
+    @GetMapping("/users")
+    public Iterable<User> getAllUsers() {
+        return userService.findAllUsers();
+    }
 
+    // Nowy endpoint zwracający wszystkie oferty
+    @GetMapping("/offers")
+    public Iterable<Offer> getAllOffers() {
+        return offerService.findAllOffers();
+    }
 }

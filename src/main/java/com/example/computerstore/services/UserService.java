@@ -17,4 +17,9 @@ public class UserService {
         User user = new User(name, surname, location, password);
         return userRepository.save(user);
     }
+
+    // Nowa metoda zwracająca listę wszystkich użytkowników
+    public Iterable<User> findAllUsers() {
+        return userRepository.findAll();
+    }
 }

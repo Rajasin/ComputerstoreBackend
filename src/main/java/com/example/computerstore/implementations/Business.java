@@ -34,6 +34,31 @@ public class Business implements Account {
         setHashedPassword(password);
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getNIP() {
+        return NIP;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public double getRating() {
+        return rating;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+
     public void setHashedPassword(String rawPassword) {
         if( rawPassword == null) {
             this.password = null;

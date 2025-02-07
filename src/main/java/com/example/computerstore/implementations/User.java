@@ -35,6 +35,26 @@ public class User implements Account {
         this.setHashedPassword(password);
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
     public void showTransactions() {
 
     }

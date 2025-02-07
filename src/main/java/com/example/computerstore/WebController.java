@@ -54,4 +54,10 @@ public class WebController {
     public Iterable<Offer> getAllOffers() {
         return offerService.findAllOffers();
     }
+
+    //Nowy endpoint zwracający biznesy
+    @GetMapping("/businesses")
+    public Iterable<Business> getAllBusinesses() {
+        return businessService.findAllBusinesses();
+    }
 }

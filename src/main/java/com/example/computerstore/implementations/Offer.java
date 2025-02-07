@@ -45,4 +45,28 @@ public class Offer {
 
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public Business getBusiness() {
+        return business;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getCondition() {
+        return condition;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
 }
